@@ -18,7 +18,6 @@ steps:
     sourceRepo: 'sri-android-gradle-dev'
     artifactoryDeployerService: 'arti'
     targetRepo: 'sri-android-gradle-dev'
-    usesPlugin: true
     useWrapper: true
     deployMavenDesc: false
     deployIvyDesc: false
