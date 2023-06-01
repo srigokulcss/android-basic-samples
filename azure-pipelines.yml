@@ -10,6 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'export JFROG_CLI_LOG_LEVEL=DEBUG'
 - task: JFrogGradle@1
   inputs:
     gradleBuildFile: 'build.gradle'
@@ -28,4 +32,5 @@ steps:
   inputs:
     artifactoryConnection: 'arti'
     buildName: '$(Build.DefinitionName)'
+  
     buildNumber: '$(Build.BuildNumber)'
