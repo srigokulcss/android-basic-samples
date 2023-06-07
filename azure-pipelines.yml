@@ -16,8 +16,8 @@ steps:
     script: 'export JFROG_CLI_LOG_LEVEL=DEBUG'
 - task: JFrogGradle@1
   inputs:
-    gradleBuildFile: 'gradle-examples/gradle-android-example/build.gradle'
-    tasks: 'build artifactoryPublish'
+    gradleBuildFile: './build.gradle'
+    tasks: ' artifactoryPublish'
     artifactoryResolverService: 'arti'
     sourceRepo: 'sri-android-gradle-dev'
     artifactoryDeployerService: 'arti'
